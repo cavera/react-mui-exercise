@@ -9,6 +9,10 @@ import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import TokenOutlinedIcon from "@mui/icons-material/TokenOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import OpenInFullOutlinedIcon from "@mui/icons-material/OpenInFullOutlined";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
+import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 
 const PontoIcon = ({ name, ...props }) => {
 	const iconsType = {
@@ -22,7 +26,11 @@ const PontoIcon = ({ name, ...props }) => {
 		notify: <VerifiedOutlinedIcon {...props} />,
 		toke: <TokenOutlinedIcon {...props} />,
 		settings: <SettingsOutlinedIcon {...props} />,
-		notify: <NotificationsOutlinedIcon {...props} />,
+		bell: <NotificationsOutlinedIcon {...props} />,
+		open: <OpenInFullOutlinedIcon {...props} />,
+		visibility: <VisibilityOutlinedIcon {...props} />,
+		visibilityOff: <VisibilityOffOutlinedIcon {...props} />,
+		like: <ThumbUpOutlinedIcon {...props} />,
 	};
 
 	const myIcon = iconsType[name] || iconsType.portfolio;

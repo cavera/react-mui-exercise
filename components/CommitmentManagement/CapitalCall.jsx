@@ -1,5 +1,8 @@
 import { Typography, Box, IconButton, Badge, Card } from "@mui/material";
 import PontoIcon from "../PontoIcon";
+import CapitalCallCard from "./CapitalCallCard";
+import TextContainer from "../TextContainer";
+import Number from "../Number";
 
 const CapitalCall = ({ data }) => {
 	const {
@@ -21,42 +24,63 @@ const CapitalCall = ({ data }) => {
 							vertical: "bottom",
 							horizontal: "left",
 						}}>
-						<PontoIcon name='notify' />
+						<PontoIcon name='bell' />
 					</Badge>
 				</IconButton>
 
-				<Typography
-					variant='h6'
-					color='initial'>
-					Commitment Management
-				</Typography>
+				<Typography variant='h6'>Capital Call</Typography>
 			</Box>
 			<Box sx={{ display: "flex", gap: 2 }}>
-				<Card
-					variant='outlined'
-					sx={{ width: "100%" }}>
-					<p>Call Amount</p>
-					<p>{ammount}</p>
-				</Card>
-				<Card
-					variant='outlined'
-					sx={{ width: "100%" }}>
-					<p>Requested in</p>
-					<p>{requested}</p>
-					<p>Due on</p>
-					<p>{due}</p>
-				</Card>
-				<Card
-					variant='outlined'
-					sx={{ width: "100%" }}>
-					<p>Send to</p>
-					<p>{bank}</p>
-					<p>Account Number</p>
-					<p>{account}</p>
-					<p>Copy</p>
-					<p>Routing Number</p>
-					<p>{routingNumber}</p>
-				</Card>
+				<CapitalCallCard>
+					<TextContainer>
+						<Typography variant='subtitle2'>Call Amount</Typography>
+						<Number
+							number={ammount}
+							numberformat='price'
+						/>
+					</TextContainer>
+				</CapitalCallCard>
+
+				<CapitalCallCard>
+					<TextContainer>
+						<Typography variant='subtitle2'>Requested in</Typography>
+						<Typography variant='body2'>{requested}</Typography>
+					</TextContainer>
+					<TextContainer>
+						<Typography
+							variant='subtitle2'
+							color='initial'>
+							Due on
+						</Typography>
+						<Typography variant='body2'>{due}</Typography>
+					</TextContainer>
+				</CapitalCallCard>
+				<CapitalCallCard>
+					<TextContainer>
+						<Typography variant='subtitle2'>Send to</Typography>
+						<Typography variant='body2'>{bank}</Typography>
+						<Typography variant='body2'>Account Number</Typography>
+						<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+							<Typography variant='body2'>{account}</Typography>
+							<PontoIcon name='visibility' />
+							<Typography
+								variant='body2'
+								color='primary'>
+								Copy
+							</Typography>
+						</Box>
+					</TextContainer>
+					<TextContainer space='top'>
+						<Typography variant='subtitle2'>Routing Number</Typography>
+						<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+							<Typography variant='body2'>{routingNumber}</Typography>
+							<PontoIcon
+								name='visibilityOff'
+								color='disabled'
+							/>
+						</Box>
+					</TextContainer>
+				</CapitalCallCard>
 			</Box>
 		</>
 	);
