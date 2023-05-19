@@ -1,7 +1,8 @@
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
+import Number from "../Number";
 
-const ToolBarDato = ({ title, subtitle, number }) => {
+const ToolBarDato = ({ title, subtitle, number, numberformat }) => {
 	return (
 		<Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 			<Typography
@@ -14,11 +15,10 @@ const ToolBarDato = ({ title, subtitle, number }) => {
 				color='initial'>
 				{subtitle}
 			</Typography>
-			<Typography
-				variant='subtitle1'
-				color='initial'>
-				{number}
-			</Typography>
+			<Number
+				number={number}
+				numberformat={numberformat}
+			/>
 		</Box>
 	);
 };

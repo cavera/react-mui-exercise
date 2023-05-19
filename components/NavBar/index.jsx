@@ -3,11 +3,14 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Box, Container } from "@mui/material";
 import ToolBarDato from "../ToolBarDato";
+import { portfolio } from "../../data/data";
 
 const NavBar = () => {
-	const data = { value: 7762500, title: "portfolio" };
-
-	//Todo: Tener en cuenta usos de UseEffect
+	const {
+		pervalue,
+		gat: { quantity, denomination },
+		yield: { annual },
+	} = portfolio;
 
 	return (
 		<AppBar
@@ -18,17 +21,24 @@ const NavBar = () => {
 					<ToolBarDato
 						title='Portfolio per value'
 						subtitle=''
-						number={`$${7762500}`}
+						number={pervalue}
+						numberformat='price'
 					/>
 					<ToolBarDato
 						title='Gat'
 						subtitle='Quantity'
-						number={`${5.55}`}
+						number={`${quantity}`}
 					/>
 					<ToolBarDato
-						title='Gat'
+						title=' '
 						subtitle='Denomination'
-						number={`$${1000000}`}
+						number={denomination}
+						numberformat='price'
+					/>
+					<ToolBarDato
+						title='Yield'
+						subtitle='Annual historical'
+						number={annual}
 					/>
 				</Container>
 			</Toolbar>
