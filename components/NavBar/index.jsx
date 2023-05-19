@@ -1,8 +1,6 @@
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { Box, Container } from "@mui/material";
+import { AppBar, Toolbar, Box, Container, Chip, IconButton } from "@mui/material";
 import ToolBarDato from "../ToolBarDato";
+import PontoIcon from "../PontoIcon";
 import { portfolio } from "../../data/data";
 
 const NavBar = () => {
@@ -15,9 +13,10 @@ const NavBar = () => {
 	return (
 		<AppBar
 			position='static'
-			color='background'>
-			<Toolbar>
-				<Container sx={{ display: "flex", gap: 2 }}>
+			color='background'
+			sx={{ boxShadow: "none" }}>
+			<Toolbar sx={{ justifyContent: "space-between", border: "1px solid #f2f2f2" }}>
+				<Box sx={{ display: "flex", gap: 2, flexGrow: 1, paddingLeft: 0 }}>
 					<ToolBarDato
 						title='Portfolio per value'
 						subtitle=''
@@ -40,7 +39,28 @@ const NavBar = () => {
 						subtitle='Annual historical'
 						number={annual}
 					/>
-				</Container>
+				</Box>
+				<Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+					<Chip
+						label='Capital Call Info'
+						icon={<PontoIcon name='capital' />}
+					/>
+					<Chip
+						label='Digital Wallet'
+						color='primary'
+						icon={<PontoIcon name='wallet' />}
+					/>
+					<IconButton
+						disableElevation
+						variant='contained'
+						sx={{ backgroundColor: "#f2f2f2", borderRadius: 1 }}
+						onClick={() => {}}>
+						<PontoIcon
+							name='money'
+							fontSize='small'
+						/>
+					</IconButton>
+				</Box>
 			</Toolbar>
 		</AppBar>
 	);

@@ -1,14 +1,12 @@
 import Layout from "../components/Layout";
-import { Grid, Typography } from "@mui/material";
+import ProductProgress from "../components/ProductProgress";
+import CommitmentManagement from "../components/CommitmentManagement";
 
 const Home = () => {
 	return (
 		<Layout>
-			<Typography
-				variant='h3'
-				color='initial'>
-				Hi Everyone
-			</Typography>
+			<ProductProgress />
+			<CommitmentManagement />
 		</Layout>
 	);
 };

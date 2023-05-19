@@ -1,6 +1,10 @@
+/**
+ * The idea is generate a component to manage the format of the numeric values in the page.
+ */
+
 import { Typography } from "@mui/material";
 
-const Number = ({ number, numberformat }) => {
+const Number = ({ number, numberformat, ...props }) => {
 	let numberText = number;
 
 	if (!numberformat) {
@@ -16,7 +20,8 @@ const Number = ({ number, numberformat }) => {
 	return (
 		<Typography
 			variant='subtitle1'
-			color='initial'>
+			color='initial'
+			component='span'>
 			{numberText}
 		</Typography>
 	);

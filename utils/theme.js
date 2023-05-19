@@ -1,16 +1,20 @@
+/**
+ * Provisional color theme
+ */
+
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
 	palette: {
 		mode: "light",
 		primary: {
-			main: "#43a047",
+			main: "#125bff",
 		},
 		secondary: {
 			main: "#455a64",
 		},
 		background: {
-			default: "#fbfbfb",
+			default: "#ffffff",
 			paper: "#ffffff",
 		},
 		success: {

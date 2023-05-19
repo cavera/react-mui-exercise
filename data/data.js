@@ -1,3 +1,7 @@
+/***
+ * Fake data providaded by the model image
+ */
+
 const portfolio = {
 	pervalue: 7762500,
 	gat: {

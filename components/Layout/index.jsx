@@ -12,8 +12,10 @@ const Layout = ({ children }) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline enableColorScheme />
-			<NavBar />
-			<Container maxWidth='lg'>{children}</Container>
+			<Container maxWidth='100%'>
+				<NavBar />
+				{children}
+			</Container>
 		</ThemeProvider>
 	);
 };
