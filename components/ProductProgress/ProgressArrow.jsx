@@ -1,3 +1,6 @@
+import { Box } from "@mui/material";
+import PontoIcon from "../PontoIcon";
+
 const ProgressArrow = () => {
 	return (
 		<Box
@@ -11,3 +14,5 @@ const ProgressArrow = () => {
 		</Box>
 	);
 };
+
+export default ProgressArrow;

@@ -1,3 +1,5 @@
+import { Card } from "@mui/material";
+
 const ProgressCard = ({ children }) => {
 	return (
 		<Card
@@ -13,3 +15,5 @@ const ProgressCard = ({ children }) => {
 		</Card>
 	);
 };
+
+export default ProgressCard;

@@ -19,7 +19,7 @@ const Number = ({ number, numberformat, ...props }) => {
 	}
 	return (
 		<Typography
-			variant='subtitle1'
+			variant='span'
 			color='initial'
 			component='span'>
 			{numberText}

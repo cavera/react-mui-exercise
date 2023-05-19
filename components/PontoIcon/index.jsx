@@ -7,6 +7,8 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlined";
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import TokenOutlinedIcon from "@mui/icons-material/TokenOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 
 const PontoIcon = ({ name, ...props }) => {
 	const iconsType = {
@@ -19,6 +21,8 @@ const PontoIcon = ({ name, ...props }) => {
 		capital: <AccountBalanceOutlinedIcon {...props} />,
 		notify: <VerifiedOutlinedIcon {...props} />,
 		toke: <TokenOutlinedIcon {...props} />,
+		settings: <SettingsOutlinedIcon {...props} />,
+		notify: <NotificationsOutlinedIcon {...props} />,
 	};
 
 	const myIcon = iconsType[name] || iconsType.portfolio;

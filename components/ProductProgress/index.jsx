@@ -1,9 +1,9 @@
-import { Paper, Box, Card, Chip, Typography } from "@mui/material";
+import { Box, Card, Chip, Typography } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 import Number from "../Number";
 import { capitalProcess } from "../../data/data";
-import ProgressCard from "./";
-import ProgressArrow from "./";
+import ProgressCard from "./ProgressCard";
+import ProgressArrow from "./ProgressArrow";
 
 const ProductProgress = () => {
 	const { capital, due } = capitalProcess;
@@ -35,6 +35,7 @@ const ProductProgress = () => {
 							<Chip
 								label={due}
 								sx={{ borderRadius: 1, padding: "4px 0", height: "auto" }}
+								component='span'
 							/>
 						}
 					</Typography>
@@ -59,7 +60,7 @@ const ProductProgress = () => {
 					color='primary'
 				/>
 				<Box>
-					<Typography variant='body1'>Toke will then be minted and we will notify you once it's been issued.</Typography>
+					<Typography variant='body1'>{`Toke will then be minted and we will notify you once it's been issued.`}</Typography>
 				</Box>
 			</ProgressCard>
 		</Box>

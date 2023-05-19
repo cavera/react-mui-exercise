@@ -51,7 +51,6 @@ const NavBar = () => {
 						icon={<PontoIcon name='wallet' />}
 					/>
 					<IconButton
-						disableElevation
 						variant='contained'
 						sx={{ backgroundColor: "#f2f2f2", borderRadius: 1 }}
 						onClick={() => {}}>
