@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import CommitmentManagementHeader from "./CommitmentManagementHeader";
+import CommitmentSelector from "./CommitmentSelector";
 import CommitmentDetails from "./CommitmentDetails";
 import CapitalCall from "./CapitalCall";
 import CTA from "./CTA";
@@ -12,7 +13,7 @@ const CommitmentManagement = () => {
 	return (
 		<Box sx={{ padding: 3, border: "1px solid #f2f2f2" }}>
 			<CommitmentManagementHeader />
-
+			<CommitmentSelector />
 			<CommitmentDetails commitment={cMnt.commitment} />
 			<CapitalCall data={cMnt.capitalCall} />
 			<CTA />

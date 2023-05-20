@@ -18,8 +18,7 @@ const ProductProgress = () => {
 				/>
 				<Box>
 					<Chip
-						sx={{ borderRadius: 1, padding: "4px 0", height: "auto" }}
-						color='error'
+						sx={{ borderRadius: 1, padding: "4px 0", height: "auto", backgroundColor: "error.light" }}
 						label='Action required'
 					/>
 					<Typography variant='body1'>

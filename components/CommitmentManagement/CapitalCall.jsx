@@ -1,4 +1,4 @@
-import { Typography, Box, IconButton, Badge, Card } from "@mui/material";
+import { Typography, Box, IconButton, Badge, Stack } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 import CapitalCallCard from "./CapitalCallCard";
 import TextContainer from "../TextContainer";
@@ -60,7 +60,10 @@ const CapitalCall = ({ data }) => {
 						<Typography variant='subtitle2'>Send to</Typography>
 						<Typography variant='body2'>{bank}</Typography>
 						<Typography variant='body2'>Account Number</Typography>
-						<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+						<Stack
+							direction='row'
+							alignItems='center'
+							spacing={1}>
 							<Typography variant='body2'>{account}</Typography>
 							<PontoIcon name='visibility' />
 							<Typography
@@ -68,17 +71,20 @@ const CapitalCall = ({ data }) => {
 								color='primary'>
 								Copy
 							</Typography>
-						</Box>
+						</Stack>
 					</TextContainer>
 					<TextContainer space='top'>
 						<Typography variant='subtitle2'>Routing Number</Typography>
-						<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+						<Stack
+							direction='row'
+							alignItems='center'
+							spacing={1}>
 							<Typography variant='body2'>{routingNumber}</Typography>
 							<PontoIcon
 								name='visibilityOff'
 								color='disabled'
 							/>
-						</Box>
+						</Stack>
 					</TextContainer>
 				</CapitalCallCard>
 			</Box>

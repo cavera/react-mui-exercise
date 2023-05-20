@@ -3,14 +3,24 @@ import React from "react";
 
 const TextContainer = ({ children, space, ...props }) => {
 	const spaceOptions = {
-		top: "end",
-		bottom: "start",
+		top: "flex-end",
+		bottom: "flex-start",
 		middle: "space-between",
 	};
 
 	const justify = spaceOptions[space] || spaceOptions["middle"];
 	console.log(justify);
-	return <Box sx={{ display: "flex", flexDirection: "column", justifyContent: `${justify}`, height: "100%" }}>{children}</Box>;
+	return (
+		<Box
+			sx={{
+				display: "flex",
+				flexDirection: "column",
+				justifyContent: `${justify}`,
+				alignSelf: "stretch",
+			}}>
+			{children}
+		</Box>
+	);
 };
 
 export default TextContainer;

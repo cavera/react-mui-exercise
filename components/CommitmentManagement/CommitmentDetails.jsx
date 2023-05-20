@@ -66,17 +66,22 @@ const CommitmentDetails = ({ commitment }) => {
 						valueBuffer={bufferValue}
 					/>
 				</Card>
-				<Box sx={{ display: "flex", alignItems: "center", marginTop: 1 }}>
+				<Stack
+					direction='row'
+					alignItems='center'
+					spacing={1}
+					mt={1}
+					color='grey.400'>
 					<PontoIcon
 						name='open'
-						color='disabled'
+						color='inherit'
 					/>
 					<Typography
 						variant='body2'
-						color='disabled'>
+						color='inherit'>
 						View Documentation
 					</Typography>
-				</Box>
+				</Stack>
 			</Box>
 			<Box
 				sx={{
