@@ -31,6 +31,8 @@ const CommitmentDetails = ({ commitment }) => {
 							<Number
 								number={allocated}
 								numberformat='price'
+								colorCur='green'
+								variant='h4'
 							/>
 						</Box>
 						<Box
@@ -41,6 +43,7 @@ const CommitmentDetails = ({ commitment }) => {
 								<Number
 									number={pending}
 									numberformat='price'
+									colorCur='green'
 								/>
 							</Box>
 							<Box>
@@ -48,6 +51,7 @@ const CommitmentDetails = ({ commitment }) => {
 								<Number
 									number={outstanding}
 									numberformat='price'
+									colorCur='gray'
 								/>
 							</Box>
 							<Box>

@@ -1,6 +1,7 @@
 import { Card } from "@mui/material";
 
-const ProgressCard = ({ children }) => {
+const ProgressCard = ({ children, disabled }) => {
+	const opacity = disabled ? 0.2 : 1;
 	return (
 		<Card
 			variant='outlined'
@@ -10,6 +11,7 @@ const ProgressCard = ({ children }) => {
 				alignItems: "center",
 				width: "100%",
 				padding: 2,
+				opacity: `${opacity}`,
 			}}>
 			{children}
 		</Card>

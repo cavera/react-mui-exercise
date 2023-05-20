@@ -4,24 +4,35 @@
 
 import { Typography } from "@mui/material";
 
-const Number = ({ number, numberformat, ...props }) => {
+const Number = ({ number, numberformat, currency, colorCur, variant, ...props }) => {
 	let numberText = number;
+	let curSym = currency || "$";
+	let formattedNumber = null;
+	let symbolComp = null;
+	let symbolColor = colorCur || "inherit";
 
 	if (!numberformat) {
 		numberText = number;
 	} else if (numberformat === "price") {
-		numberText =
-			"$" +
-			number.toLocaleString("es-ES", {
-				minimumFractionDigits: 2,
-				maximumFractionDigits: 2,
-			});
+		formattedNumber = number.toLocaleString("es-ES", {
+			minimumFractionDigits: 2,
+			maximumFractionDigits: 2,
+		});
+		symbolComp = (
+			<Typography
+				variant='span'
+				color={symbolColor}>
+				{curSym}
+			</Typography>
+		);
+		numberText = `${formattedNumber}`;
 	}
 	return (
 		<Typography
-			variant='span'
 			color='initial'
+			variant={variant}
 			component='span'>
+			{symbolComp}
 			{numberText}
 		</Typography>
 	);

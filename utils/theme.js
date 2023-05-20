@@ -33,7 +33,7 @@ const theme = createTheme({
 		divider: "rgba(47,82,27,0.1)",
 	},
 	typography: {
-		// fontFamily: "Poppins, sans-serif",
+		fontFamily: "Poppins, sans-serif",
 		fontSize: 16,
 		h1: {
 			fontSize: "2.9rem",

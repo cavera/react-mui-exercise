@@ -9,7 +9,6 @@ const TextContainer = ({ children, space, ...props }) => {
 	};
 
 	const justify = spaceOptions[space] || spaceOptions["middle"];
-	console.log(justify);
 	return (
 		<Box
 			sx={{

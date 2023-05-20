@@ -41,7 +41,7 @@ const ProductProgress = () => {
 				</Box>
 			</ProgressCard>
 			<ProgressArrow />
-			<ProgressCard>
+			<ProgressCard disabled={true}>
 				<PontoIcon
 					name='notify'
 					fontSize='large'
@@ -51,8 +51,8 @@ const ProductProgress = () => {
 					<Typography variant='body1'>We will notify you once we have received your capital.</Typography>
 				</Box>
 			</ProgressCard>
-			<ProgressArrow />
-			<ProgressCard>
+			<ProgressArrow disabled={true} />
+			<ProgressCard disabled={true}>
 				<PontoIcon
 					name='toke'
 					fontSize='large'
