@@ -5,12 +5,6 @@ import Number from "../Number";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 	height: 8,
-	// [`&.${linearProgressClasses.colorPrimary}`]: {
-	//   backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
-	// },
-	// [`& .${linearProgressClasses.bar}`]: {
-	//   backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
-	// },
 }));
 
 const CommitmentData = ({ commitment }) => {

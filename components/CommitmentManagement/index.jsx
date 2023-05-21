@@ -17,10 +17,7 @@ const CommitmentManagement = () => {
 
 	console.log(commitmentSelected);
 
-	const handleChange = id => {
-		setCommitmentId(id);
-		console.log(id);
-	};
+	const handleChange = id => setCommitmentId(id);
 
 	return (
 		<Box sx={{ border: "1px solid #f2f2f2" }}>
