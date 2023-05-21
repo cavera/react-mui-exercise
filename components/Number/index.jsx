@@ -4,20 +4,32 @@
 
 import { Typography } from "@mui/material";
 
-const Number = ({ number, numberformat, currency, colorCur, variant, ...props }) => {
+const Number = ({ number, numberformat, currency, colorCur, variant, cents }) => {
 	let numberText = number;
 	let curSym = currency || "$";
 	let formattedNumber = null;
 	let symbolComp = null;
 	let symbolColor = colorCur || "inherit";
+	let centText = "";
 
 	if (!numberformat) {
 		numberText = number;
 	} else if (numberformat === "price") {
-		formattedNumber = number.toLocaleString("es-ES", {
-			minimumFractionDigits: 2,
-			maximumFractionDigits: 2,
+		formattedNumber = number.toLocaleString("en-EN", {
+			minimumFractionDigits: cents,
+			maximumFractionDigits: cents,
 		});
+
+		if (cents > 0) {
+			centText = (
+				<Typography
+					variant='span'
+					fontSize='0.6em'>
+					{formattedNumber.slice(-3)}
+				</Typography>
+			);
+		}
+
 		symbolComp = (
 			<Typography
 				variant='span'
@@ -26,6 +38,8 @@ const Number = ({ number, numberformat, currency, colorCur, variant, ...props })
 			</Typography>
 		);
 		numberText = `${formattedNumber}`;
+	} else if (numberformat === "percent") {
+		numberText = `${number.toFixed(3)}%`;
 	}
 	return (
 		<Typography
@@ -34,6 +48,7 @@ const Number = ({ number, numberformat, currency, colorCur, variant, ...props })
 			component='span'>
 			{symbolComp}
 			{numberText}
+			{centText}
 		</Typography>
 	);
 };

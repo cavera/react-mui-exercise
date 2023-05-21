@@ -10,7 +10,7 @@ const ProgressCard = ({ children, disabled }) => {
 				gap: 2,
 				alignItems: "center",
 				width: "100%",
-				padding: 2,
+				padding: 1.5,
 				opacity: `${opacity}`,
 			}}>
 			{children}

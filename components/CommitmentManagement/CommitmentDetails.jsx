@@ -1,98 +1,27 @@
-import { Stack, Box, Typography, Card, LinearProgress } from "@mui/material";
-import Number from "../Number";
+import { Box, Button } from "@mui/material";
 import PontoIcon from "../PontoIcon";
+import CommitmentData from "./CommitmentData";
+import CommitmentGraph from "./CommitmentGraph";
 
 const CommitmentDetails = ({ commitment }) => {
-	const { id, totalSuccesfulCalls, allocated, pending, outstanding, total } = commitment;
-	const progressValue = (outstanding / total) * 100;
-	const bufferValue = progressValue + (pending / total) * 100;
-
 	return (
 		<Box
 			display='flex'
-			gap={2}>
-			<Box flexGrow={1}>
-				<Card>
-					<Stack
-						spacing={4}
-						p={3}
-						width='100%'>
-						<Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-							<Typography variant='subtitle2'>
-								Commitment ID <Number number={id} />
-							</Typography>
-							<Typography variant='subtitle2'>
-								Total succesfull Calls
-								<Number number={` ${totalSuccesfulCalls}`} />
-							</Typography>
-						</Box>
-						<Box>
-							<Typography variant='subtitle2'>Allocated</Typography>
-							<Number
-								number={allocated}
-								numberformat='price'
-								colorCur='green'
-								variant='h4'
-							/>
-						</Box>
-						<Box
-							display='flex'
-							justifyContent='space-between'>
-							<Box>
-								<Typography>Pending allocated</Typography>
-								<Number
-									number={pending}
-									numberformat='price'
-									colorCur='green'
-								/>
-							</Box>
-							<Box>
-								<Typography>Outstanding</Typography>
-								<Number
-									number={outstanding}
-									numberformat='price'
-									colorCur='gray'
-								/>
-							</Box>
-							<Box>
-								<Typography>Total Commitment</Typography>
-								<Number
-									number={total}
-									numberformat='price'
-								/>
-							</Box>
-						</Box>
-					</Stack>
-					<LinearProgress
-						color='success'
-						variant='determinate'
-						value={progressValue}
-						valueBuffer={bufferValue}
-					/>
-				</Card>
-				<Stack
-					direction='row'
-					alignItems='center'
-					spacing={1}
-					mt={1}
-					color='grey.400'>
-					<PontoIcon
-						name='open'
-						color='inherit'
-					/>
-					<Typography
-						variant='body2'
-						color='inherit'>
-						View Documentation
-					</Typography>
-				</Stack>
-			</Box>
+			gap={3.5}
+			sx={{ pl: 4, pr: 4 }}>
 			<Box
-				sx={{
-					width: "30%",
-					backgroundColor: "#f5f5f5",
-				}}>
-				Possible chart
+				flexGrow={1}
+				width='100%'>
+				<CommitmentData commitment={commitment} />
+				<Button
+					color='info'
+					startIcon={<PontoIcon name='open' />}
+					sx={{ mt: 3 }}>
+					View Documentation
+				</Button>
+			</Box>
+			<Box sx={{ width: "50%" }}>
+				<CommitmentGraph />
 			</Box>
 		</Box>
 	);

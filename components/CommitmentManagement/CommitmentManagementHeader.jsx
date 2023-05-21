@@ -1,26 +1,20 @@
-import { Typography, Box } from "@mui/material";
+import { Button, Typography, Box } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 
 const CommitmentManagementHeader = () => {
 	return (
-		<Box sx={{ display: "flex", gap: 2 }}>
+		<Box sx={{ display: "flex", gap: 4, backgroundColor: "#FAFBFB", padding: 4 }}>
 			<Typography
-				variant='h6'
+				variant='h2'
 				color='initial'>
 				Commitment Management
 			</Typography>
-			<Box sx={{ display: "flex", alignItems: "center" }}>
-				<PontoIcon
-					name='settings'
-					fontSize='sm'
-				/>
-				<Typography
-					variant='body2'
-					color='initial'
-					component={"span"}>
-					Client settings
-				</Typography>
-			</Box>
+
+			<Button
+				color='info'
+				startIcon={<PontoIcon name='settings' />}>
+				Client settings
+			</Button>
 		</Box>
 	);
 };
