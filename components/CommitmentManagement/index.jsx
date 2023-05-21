@@ -8,15 +8,30 @@ import CTA from "./CTA";
 import { commitmentManagement } from "../../data/data";
 
 const CommitmentManagement = () => {
-	const [commitment, setCommitment] = useState(null);
 	const cMnt = commitmentManagement;
+	const [commitmentId, setCommitmentId] = useState(cMnt.commitments[0].id);
+
+	const commitmentSelected = cMnt.commitments.find(commitment => {
+		return commitment.id === commitmentId;
+	});
+
+	console.log(commitmentSelected);
+
+	const handleChange = id => {
+		setCommitmentId(id);
+		console.log(id);
+	};
 
 	return (
 		<Box sx={{ border: "1px solid #f2f2f2" }}>
 			<CommitmentManagementHeader />
-			<CommitmentSelector />
-			<CommitmentDetails commitment={cMnt.commitment} />
-			<CapitalCall data={cMnt.capitalCall} />
+			<CommitmentSelector
+				commitmentId={commitmentId}
+				commitments={cMnt.commitments}
+				changeComitment={id => handleChange(id)}
+			/>
+			<CommitmentDetails commitment={commitmentSelected} />
+			<CapitalCall data={commitmentSelected.capitalCall} />
 			<CTA />
 		</Box>
 	);

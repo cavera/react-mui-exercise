@@ -14,8 +14,9 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 const CommitmentData = ({ commitment }) => {
-	const { id, totalSuccesfulCalls, allocated, pending, outstanding, total } = commitment;
-	const progressValue = (outstanding / total) * 100;
+	const { id, totalSuccesfulCalls, allocated, pending, outstanding } = commitment;
+	const total = allocated + pending + outstanding;
+	const progressValue = (allocated / total) * 100;
 	const bufferValue = progressValue + (pending / total) * 100;
 
 	const commitmentId = (

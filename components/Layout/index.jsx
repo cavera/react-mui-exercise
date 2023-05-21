@@ -1,4 +1,6 @@
 import "@fontsource/poppins";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/700.css";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "../../utils/theme";

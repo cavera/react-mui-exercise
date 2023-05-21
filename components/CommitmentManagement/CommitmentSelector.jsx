@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { MenuItem, Select, FormControl } from "@mui/material";
 
-const CommitmentSelector = props => {
-	const [commitment, setCommitment] = useState(0);
-
+const CommitmentSelector = ({ commitmentId, commitments, changeComitment }) => {
 	const menuItemStyle = { fontSize: "1rem" };
 
 	const handleChange = event => {
-		setCommitment(event.target.value);
+		changeComitment(event.target.value);
 	};
 
 	return (
@@ -16,28 +14,16 @@ const CommitmentSelector = props => {
 			size='small'>
 			<Select
 				displayEmpty
-				value={commitment}
-				onChange={handleChange}>
-				<MenuItem
-					value={0}
-					sx={menuItemStyle}>
-					Commitment ID <span>#000000000</span>
-				</MenuItem>
-				<MenuItem
-					value={1}
-					sx={menuItemStyle}>
-					Commitment ID <span>#000000001</span>
-				</MenuItem>
-				<MenuItem
-					value={2}
-					sx={menuItemStyle}>
-					Commitment ID <span>#000000002</span>
-				</MenuItem>
-				<MenuItem
-					value={3}
-					sx={menuItemStyle}>
-					Commitment ID <span>#000000003</span>
-				</MenuItem>
+				value={commitmentId}
+				onChange={event => handleChange(event)}>
+				{commitments.map(commitmentEl => (
+					<MenuItem
+						key={commitmentEl.id}
+						value={commitmentEl.id}
+						sx={menuItemStyle}>
+						Commitment ID <span>#{commitmentEl.id}</span>
+					</MenuItem>
+				))}
 			</Select>
 		</FormControl>
 	);
