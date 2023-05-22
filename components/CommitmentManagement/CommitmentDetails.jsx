@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 import CommitmentData from "./CommitmentData";
 import CommitmentGraph from "./CommitmentGraph";
@@ -28,7 +28,6 @@ const CommitmentDetails = ({ commitment }) => {
 				<CommitmentGraph />
 			</Grid>
 		</Grid>
-		// </Box>
 	);
 };
 

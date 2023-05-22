@@ -3,7 +3,7 @@ import { IconButton } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 
 const VisibilityToggle = ({ initialState, onToggle }) => {
-	const [visibility, setVisibility] = useState(false);
+	const [visibility, setVisibility] = useState(initialState);
 
 	let visibilityIcon = null;
 

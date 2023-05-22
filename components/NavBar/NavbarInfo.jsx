@@ -1,9 +1,8 @@
-import { Stack, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import Number from "../Number";
 import TextContainer from "../TextContainer";
-import PontoIcon from "../PontoIcon";
-import { portfolio } from "../../data/data";
 import TextWithIcon from "../TextWithIcon";
+import { portfolio } from "../../data/data";
 
 const NavbarInfo = () => {
 	const {
@@ -12,7 +11,7 @@ const NavbarInfo = () => {
 		yield: { annual },
 	} = portfolio;
 	return (
-		<Box sx={{ display: "flex", gap: 6, flexGrow: 1, paddingLeft: 0 }}>
+		<Box sx={{ display: "flex", gap: { xs: 1, lg: 6 }, flexGrow: 1, paddingLeft: 0 }}>
 			<TextContainer>
 				<TextWithIcon
 					content='Portfolio per value'

@@ -1,4 +1,4 @@
-import { Stack, Box, Chip, Typography } from "@mui/material";
+import { Stack, Box, Typography } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 import Number from "../Number";
 import { capitalProcess } from "../../data/data";
@@ -33,6 +33,7 @@ const ProductProgress = () => {
 						text='Action required'
 						type='danger'
 					/>
+
 					<Typography
 						variant='subtitle1'
 						sx={{ lineHeight: 1.7 }}>

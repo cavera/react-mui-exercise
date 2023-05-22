@@ -13,7 +13,9 @@ const SensitiveText = ({ data }) => {
 		<Stack
 			direction='row'
 			alignItems='center'
-			spacing={1}>
+			spacing={1}
+			mt={-1}
+			mb={-1}>
 			<Typography variant='h6'>{isVisible ? data : "••••••••••"}</Typography>
 			<VisibilityToggle
 				initialState={false}

@@ -7,7 +7,8 @@ const NavbarActions = () => {
 		<Stack
 			direction='row'
 			alignItems='center'
-			spacing={3}>
+			// spacing={3}
+			sx={{ gap: { xs: 1, lg: 3 } }}>
 			<Chip
 				label='Capital Call Info'
 				sx={chipStyles}

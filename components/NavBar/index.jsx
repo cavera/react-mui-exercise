@@ -4,7 +4,7 @@ import NavbarActions from "./NavbarActions";
 
 const NavBar = () => {
 	return (
-		<Box sx={{ display: "flex", justifyContent: "space-between", border: "1px solid #F0F0F0", padding: 4 }}>
+		<Box sx={{ display: "flex", flexDirection: { md: "row", sm: "column" }, gap: 2, justifyContent: "space-between", border: "1px solid #F0F0F0", padding: 4 }}>
 			<NavbarInfo />
 			<NavbarActions />
 		</Box>
