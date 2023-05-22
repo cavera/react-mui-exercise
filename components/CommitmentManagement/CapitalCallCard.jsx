@@ -2,7 +2,7 @@ import { Card, Typography } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 
 const CapitalCallCard = ({ children, direction }) => {
-	const directionOpts = direction === "vertical" ? { flexDirection: "column", gap: 1 } : { gap: 6 };
+	const directionOpts = direction === "vertical" ? { flexDirection: "column", gap: 1 } : { gap: 4 };
 
 	return (
 		<Card

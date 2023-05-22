@@ -16,6 +16,7 @@ const TextContainer = ({ children, space, ...props }) => {
 				flexDirection: "column",
 				justifyContent: `${justify}`,
 				alignSelf: "stretch",
+				gap: 1,
 			}}>
 			{children}
 		</Box>

@@ -1,9 +1,12 @@
-import { Typography, Box, IconButton, Badge, Stack } from "@mui/material";
+import { Typography, Box, Button, Stack, IconButton } from "@mui/material";
 import CapitalCallHeader from "./CapitalCallHeader";
 import PontoIcon from "../PontoIcon";
 import CapitalCallCard from "../CommitmentManagement/CapitalCallCard";
 import TextContainer from "../TextContainer";
 import Number from "../Number";
+import VisibilityToggle from "../VisibilityToggle";
+import SensitiveText from "../SensitiveText";
+import { AccountBalanceOutlined } from "@mui/icons-material";
 
 const CapitalCall = ({ data }) => {
 	const {
@@ -37,36 +40,17 @@ const CapitalCall = ({ data }) => {
 						<Typography variant='h6'>{due}</Typography>
 					</TextContainer>
 				</CapitalCallCard>
+
 				<CapitalCallCard>
 					<TextContainer>
 						<Typography variant='h5'>Send to</Typography>
 						<Typography variant='h6'>{bank}</Typography>
 						<Typography variant='h6'>Account Number</Typography>
-						<Stack
-							direction='row'
-							alignItems='center'
-							spacing={1}>
-							<Typography variant='subtitle1'>{account}</Typography>
-							<PontoIcon name='visibility' />
-							<Typography
-								variant='h6'
-								color='primary'>
-								Copy
-							</Typography>
-						</Stack>
+						<SensitiveText data={account} />
 					</TextContainer>
 					<TextContainer space='top'>
 						<Typography variant='h6'>Routing Number</Typography>
-						<Stack
-							direction='row'
-							alignItems='center'
-							spacing={1}>
-							<Typography variant='h6'>{routingNumber}</Typography>
-							<PontoIcon
-								name='visibilityOff'
-								color='disabled'
-							/>
-						</Stack>
+						<SensitiveText data={routingNumber} />
 					</TextContainer>
 				</CapitalCallCard>
 			</Box>

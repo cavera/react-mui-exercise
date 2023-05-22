@@ -15,8 +15,6 @@ const CommitmentManagement = () => {
 		return commitment.id === commitmentId;
 	});
 
-	console.log(commitmentSelected);
-
 	const handleChange = id => setCommitmentId(id);
 
 	return (
