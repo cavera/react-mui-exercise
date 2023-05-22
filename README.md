@@ -4,6 +4,8 @@ This is a coding exercise implementing React JS and Material UI library.
 
 All of the measurements were based on the image provided, and I used [this Figma file](https://www.figma.com/file/LFx7tsY4z90v6esMr7YWR0/Exercise-measures?type=design&node-id=103%3A4&t=c3xo5GWX8adl19Lo-1) to try to make the exercise near-pixel perfect.
 
+> Thinking about the empty space on the provided image, I use a fake example of chart made with Chart.js and the react-chartjs-2 plugin.
+
 ---
 
 ## Basic instalation
