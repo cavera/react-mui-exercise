@@ -3,6 +3,7 @@ import Number from "../Number";
 import TextContainer from "../TextContainer";
 import PontoIcon from "../PontoIcon";
 import { portfolio } from "../../data/data";
+import TextWithIcon from "../TextWithIcon";
 
 const NavbarInfo = () => {
 	const {
@@ -13,16 +14,10 @@ const NavbarInfo = () => {
 	return (
 		<Box sx={{ display: "flex", gap: 6, flexGrow: 1, paddingLeft: 0 }}>
 			<TextContainer>
-				<Stack
-					direction='row'
-					alignItems='center'
-					spacing={1}>
-					<PontoIcon
-						name='portfolio'
-						fontSize='small'
-					/>
-					<Typography variant='body1'>Portfolio per value</Typography>
-				</Stack>
+				<TextWithIcon
+					content='Portfolio per value'
+					iName='portfolio'
+				/>
 				<Number
 					number={pervalue}
 					numberformat='price'
@@ -31,18 +26,13 @@ const NavbarInfo = () => {
 					cents={2}
 				/>
 			</TextContainer>
+
 			<Box sx={{ display: "flex", gap: 3 }}>
 				<TextContainer>
-					<Stack
-						direction='row'
-						alignItems='center'
-						spacing={1}>
-						<PontoIcon
-							name='gat'
-							fontSize='small'
-						/>
-						<Typography variant='body1'>Gat</Typography>
-					</Stack>
+					<TextWithIcon
+						content='Gat'
+						iName='gat'
+					/>
 					<Typography variant='body2'>Quantity</Typography>
 					<Number
 						number={quantity}
@@ -61,16 +51,11 @@ const NavbarInfo = () => {
 				</TextContainer>
 			</Box>
 			<TextContainer>
-				<Stack
-					direction='row'
-					alignItems='center'
-					spacing={1}>
-					<PontoIcon
-						name='money'
-						fontSize='small'
-					/>
-					<Typography variant='body1'>Yield</Typography>
-				</Stack>
+				<TextWithIcon
+					content='Yield'
+					iName='money'
+				/>
+
 				<Typography variant='body2'>Annual historical</Typography>
 				<Number
 					number={annual}

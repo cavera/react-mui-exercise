@@ -7,7 +7,7 @@ const CapitalCallCard = ({ children, direction }) => {
 	return (
 		<Card
 			variant='outlined'
-			sx={{ width: "100%", p: 4, backgroundColor: "grey.50", display: "flex", ...directionOpts }}>
+			sx={{ width: "100%", height: "100%", p: 4, backgroundColor: "grey.50", display: "flex", ...directionOpts }}>
 			{children}
 		</Card>
 	);

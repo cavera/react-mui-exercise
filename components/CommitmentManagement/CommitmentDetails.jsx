@@ -1,17 +1,18 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import PontoIcon from "../PontoIcon";
 import CommitmentData from "./CommitmentData";
 import CommitmentGraph from "./CommitmentGraph";
 
 const CommitmentDetails = ({ commitment }) => {
 	return (
-		<Box
-			display='flex'
-			gap={3.5}
+		<Grid
+			container
+			spacing={3.5}
 			sx={{ pl: 4, pr: 4 }}>
-			<Box
-				flexGrow={1}
-				width='100%'>
+			<Grid
+				item
+				lg={8}
+				md={6}>
 				<CommitmentData commitment={commitment} />
 				<Button
 					color='info'
@@ -19,11 +20,15 @@ const CommitmentDetails = ({ commitment }) => {
 					sx={{ mt: 3 }}>
 					View Documentation
 				</Button>
-			</Box>
-			<Box sx={{ width: "50%" }}>
+			</Grid>
+			<Grid
+				item
+				lg={4}
+				md={6}>
 				<CommitmentGraph />
-			</Box>
-		</Box>
+			</Grid>
+		</Grid>
+		// </Box>
 	);
 };
 

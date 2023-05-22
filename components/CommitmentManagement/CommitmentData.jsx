@@ -1,6 +1,6 @@
 import { Card, Stack, Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import LinearProgress, { linearProgressClasses } from "@mui/material/LinearProgress";
+import LinearProgress from "@mui/material/LinearProgress";
 import Number from "../Number";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -34,7 +34,7 @@ const CommitmentData = ({ commitment }) => {
 				px={3.5}
 				py={4}
 				width='100%'>
-				<Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+				<Box sx={{ display: { lg: "flex", md: "block" }, alignItems: "center", justifyContent: "space-between" }}>
 					<Typography variant='h6'>Commitment ID {commitmentId}</Typography>
 					<Typography variant='h6'>Total succesfull Calls {succesfulCalls}</Typography>
 				</Box>
@@ -49,6 +49,7 @@ const CommitmentData = ({ commitment }) => {
 				</Box>
 				<Box
 					display='flex'
+					sx={{ flexWrap: { lg: "none", md: "wrap" }, gap: 1 }}
 					justifyContent='space-between'>
 					<Box>
 						<Typography variant='h6'>Pending allocated</Typography>

@@ -13,24 +13,29 @@ const ProductProgress = () => {
 			number={capital}
 			numberformat='price'
 			variant='h5'
+			padding={0}
 		/>
 	);
 	const dueDate = <Tag text={due} />;
 
 	return (
-		<Box sx={{ display: "flex", gap: 6, padding: 4, border: "1px solid #F0F0F0", backgroundColor: "#FAFBFB" }}>
+		<Box sx={{ display: "flex", gap: { lg: 6, md: 1 }, padding: 4, border: "1px solid #F0F0F0", backgroundColor: "#FAFBFB" }}>
 			<ProgressCard>
 				<PontoIcon
 					name='request'
 					fontSize='large'
 					color='primary'
 				/>
-				<Stack alignItems='flex-start'>
+				<Stack
+					alignItems='flex-start'
+					gap={1}>
 					<Tag
 						text='Action required'
 						type='danger'
 					/>
-					<Typography variant='subtitle1'>
+					<Typography
+						variant='subtitle1'
+						sx={{ lineHeight: 1.7 }}>
 						Capital of {capitalDue} is due on {dueDate}
 					</Typography>
 				</Stack>
