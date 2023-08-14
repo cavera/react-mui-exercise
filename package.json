@@ -1,5 +1,5 @@
 {
-  "name": "pontoro-test",
+  "name": "mui-test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "faker": "5.5.3",
-    "@emotion/react": "^11.11.0",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@fontsource/poppins": "^4.5.10",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.1",
-    "chart.js": "^4.3.0",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
-    "next": "13.4.2",
+    "@fontsource/poppins": "^5.0.8",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
+    "chart.js": "^4.3.3",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.15",
+    "faker": "^5.5.3",
+    "next": "13.4.15",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0"

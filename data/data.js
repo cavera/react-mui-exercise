@@ -11,17 +11,17 @@ const portfolio = {
 	yield: {
 		annual: 3.5,
 	},
-};
+}
 
 const capitalProcess = {
 	capital: 0,
-	due: "04/11/2023",
-};
+	due: '04/11/2023',
+}
 
 const commitmentManagement = {
 	commitments: [
 		{
-			id: "0987654321",
+			id: '0987654321',
 			totalSuccesfulCalls: 3,
 			allocated: 27000000,
 			pending: 7000000,
@@ -29,18 +29,18 @@ const commitmentManagement = {
 			capitalCall: {
 				ammount: 7000000,
 				dates: {
-					requested: "05/18/2023",
-					due: "05/22/2023",
+					requested: '05/18/2023',
+					due: '05/22/2023',
 				},
 				receiver: {
-					bank: "Pontoro Bank",
-					account: "0987654321",
-					routingNumber: "0123456789",
+					bank: 'Rego Bank',
+					account: '0987654321',
+					routingNumber: '0123456789',
 				},
 			},
 		},
 		{
-			id: "0846582846",
+			id: '0846582846',
 			totalSuccesfulCalls: 2,
 			allocated: 12000000,
 			pending: 34000000,
@@ -48,18 +48,18 @@ const commitmentManagement = {
 			capitalCall: {
 				ammount: 12000000,
 				dates: {
-					requested: "05/21/2023",
-					due: "05/23/2023",
+					requested: '05/21/2023',
+					due: '05/23/2023',
 				},
 				receiver: {
-					bank: "American Bank",
-					account: "0458754322",
-					routingNumber: "0123456789",
+					bank: 'American Bank',
+					account: '0458754322',
+					routingNumber: '0123456789',
 				},
 			},
 		},
 		{
-			id: "09875473892",
+			id: '09875473892',
 			totalSuccesfulCalls: 5,
 			allocated: 73200000,
 			pending: 56900000,
@@ -67,17 +67,17 @@ const commitmentManagement = {
 			capitalCall: {
 				ammount: 19600000,
 				dates: {
-					requested: "08/14/2023",
-					due: "08/28/2023",
+					requested: '08/14/2023',
+					due: '08/28/2023',
 				},
 				receiver: {
-					bank: "Wells Bank",
-					account: "9874598347",
-					routingNumber: "8763984739",
+					bank: 'Wells Bank',
+					account: '9874598347',
+					routingNumber: '8763984739',
 				},
 			},
 		},
 	],
-};
+}
 
-export { portfolio, capitalProcess, commitmentManagement };
+export { portfolio, capitalProcess, commitmentManagement }

@@ -1,13 +1,12 @@
-import { Stack, Chip, IconButton } from "@mui/material";
-import PontoIcon from "../PontoIcon";
+import { Stack, Chip, IconButton } from '@mui/material'
+import PontoIcon from '../PontoIcon'
 
 const NavbarActions = () => {
-	const chipStyles = { fontSize: 12, padding: 1 };
+	const chipStyles = { fontSize: 12, padding: 1 }
 	return (
 		<Stack
 			direction='row'
 			alignItems='center'
-			// spacing={3}
 			sx={{ gap: { xs: 1, lg: 3 } }}>
 			<Chip
 				label='Capital Call Info'
@@ -32,7 +31,7 @@ const NavbarActions = () => {
 			/>
 			<IconButton
 				variant='contained'
-				sx={{ backgroundColor: "#f2f2f2", borderRadius: 1 }}
+				sx={{ backgroundColor: '#f2f2f2', borderRadius: 1 }}
 				onClick={() => {}}>
 				<PontoIcon
 					name='money'
@@ -40,7 +39,7 @@ const NavbarActions = () => {
 				/>
 			</IconButton>
 		</Stack>
-	);
-};
+	)
+}
 
-export default NavbarActions;
+export default NavbarActions
