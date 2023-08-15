@@ -1,17 +1,17 @@
-import { Box, Badge, Typography } from "@mui/material";
-import PontoIcon from "../PontoIcon";
+import { Box, Badge, Typography } from '@mui/material'
+import MyIcon from '../MyIcon'
 
 const CapitalCallHeader = () => {
 	return (
-		<Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 3.5 }}>
+		<Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 3.5 }}>
 			<Badge
 				variant='dot'
 				color='error'
 				anchorOrigin={{
-					vertical: "bottom",
-					horizontal: "left",
+					vertical: 'bottom',
+					horizontal: 'left',
 				}}>
-				<PontoIcon
+				<MyIcon
 					name='bell'
 					color='disabled'
 				/>
@@ -19,7 +19,7 @@ const CapitalCallHeader = () => {
 
 			<Typography variant='h2'>Capital Call</Typography>
 		</Box>
-	);
-};
+	)
+}
 
-export default CapitalCallHeader;
+export default CapitalCallHeader

@@ -1,24 +1,24 @@
-import { Box } from "@mui/material";
-import PontoIcon from "../PontoIcon";
+import { Box } from '@mui/material'
+import MyIcon from '../MyIcon'
 
 const ProgressArrow = ({ disabled }) => {
-	const opacity = disabled ? 0.2 : 1;
+	const opacity = disabled ? 0.2 : 1
 	return (
 		<Box
 			sx={{
-				width: "auto",
-				display: "grid",
-				placeItems: "center",
+				width: 'auto',
+				display: 'grid',
+				placeItems: 'center',
 				opacity: `${opacity}`,
 			}}
 			color='primary'>
-			<PontoIcon
+			<MyIcon
 				name='right'
 				fontSize='large'
 				color='primary'
 			/>
 		</Box>
-	);
-};
+	)
+}
 
-export default ProgressArrow;
+export default ProgressArrow

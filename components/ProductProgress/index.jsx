@@ -1,13 +1,13 @@
-import { Stack, Box, Typography } from "@mui/material";
-import PontoIcon from "../PontoIcon";
-import Number from "../Number";
-import { capitalProcess } from "../../data/data";
-import ProgressCard from "./ProgressCard";
-import ProgressArrow from "./ProgressArrow";
-import Tag from "../Tag";
+import { Stack, Box, Typography } from '@mui/material'
+import MyIcon from '../MyIcon'
+import Number from '../Number'
+import { capitalProcess } from '../../data/data'
+import ProgressCard from './ProgressCard'
+import ProgressArrow from './ProgressArrow'
+import Tag from '../Tag'
 
 const ProductProgress = () => {
-	const { capital, due } = capitalProcess;
+	const { capital, due } = capitalProcess
 	const capitalDue = (
 		<Number
 			number={capital}
@@ -15,13 +15,13 @@ const ProductProgress = () => {
 			variant='h5'
 			padding={0}
 		/>
-	);
-	const dueDate = <Tag text={due} />;
+	)
+	const dueDate = <Tag text={due} />
 
 	return (
-		<Box sx={{ display: "flex", gap: { lg: 6, md: 1 }, padding: 4, border: "1px solid #F0F0F0", backgroundColor: "#FAFBFB" }}>
+		<Box sx={{ display: 'flex', gap: { lg: 6, md: 1 }, padding: 4, border: '1px solid #F0F0F0', backgroundColor: '#FAFBFB' }}>
 			<ProgressCard>
-				<PontoIcon
+				<MyIcon
 					name='request'
 					fontSize='large'
 					color='primary'
@@ -43,7 +43,7 @@ const ProductProgress = () => {
 			</ProgressCard>
 			<ProgressArrow />
 			<ProgressCard disabled={true}>
-				<PontoIcon
+				<MyIcon
 					name='notify'
 					fontSize='large'
 					color='primary'
@@ -54,7 +54,7 @@ const ProductProgress = () => {
 			</ProgressCard>
 			<ProgressArrow disabled={true} />
 			<ProgressCard disabled={true}>
-				<PontoIcon
+				<MyIcon
 					name='toke'
 					fontSize='large'
 					color='primary'
@@ -64,7 +64,7 @@ const ProductProgress = () => {
 				</Box>
 			</ProgressCard>
 		</Box>
-	);
-};
+	)
+}
 
-export default ProductProgress;
+export default ProductProgress

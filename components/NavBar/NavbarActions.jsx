@@ -1,5 +1,5 @@
 import { Stack, Chip, IconButton } from '@mui/material'
-import PontoIcon from '../PontoIcon'
+import MyIcon from '../MyIcon'
 
 const NavbarActions = () => {
 	const chipStyles = { fontSize: 12, padding: 1 }
@@ -12,7 +12,7 @@ const NavbarActions = () => {
 				label='Capital Call Info'
 				sx={chipStyles}
 				icon={
-					<PontoIcon
+					<MyIcon
 						name='capital'
 						fontSize='small'
 					/>
@@ -23,7 +23,7 @@ const NavbarActions = () => {
 				sx={chipStyles}
 				color='primary'
 				icon={
-					<PontoIcon
+					<MyIcon
 						name='wallet'
 						fontSize='small'
 					/>
@@ -33,7 +33,7 @@ const NavbarActions = () => {
 				variant='contained'
 				sx={{ backgroundColor: '#f2f2f2', borderRadius: 1 }}
 				onClick={() => {}}>
-				<PontoIcon
+				<MyIcon
 					name='money'
 					fontSize='small'
 				/>

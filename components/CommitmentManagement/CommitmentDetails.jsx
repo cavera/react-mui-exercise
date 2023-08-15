@@ -1,7 +1,7 @@
-import { Button, Grid } from "@mui/material";
-import PontoIcon from "../PontoIcon";
-import CommitmentData from "./CommitmentData";
-import CommitmentGraph from "./CommitmentGraph";
+import { Button, Grid } from '@mui/material'
+import MyIcon from '../MyIcon'
+import CommitmentData from './CommitmentData'
+import CommitmentGraph from './CommitmentGraph'
 
 const CommitmentDetails = ({ commitment }) => {
 	return (
@@ -16,7 +16,7 @@ const CommitmentDetails = ({ commitment }) => {
 				<CommitmentData commitment={commitment} />
 				<Button
 					color='info'
-					startIcon={<PontoIcon name='open' />}
+					startIcon={<MyIcon name='open' />}
 					sx={{ mt: 3 }}>
 					View Documentation
 				</Button>
@@ -28,7 +28,7 @@ const CommitmentDetails = ({ commitment }) => {
 				<CommitmentGraph />
 			</Grid>
 		</Grid>
-	);
-};
+	)
+}
 
-export default CommitmentDetails;
+export default CommitmentDetails

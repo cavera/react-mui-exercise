@@ -1,29 +1,29 @@
-import { useState } from "react";
-import { IconButton } from "@mui/material";
-import PontoIcon from "../PontoIcon";
+import { useState } from 'react'
+import { IconButton } from '@mui/material'
+import MyIcon from '../MyIcon'
 
 const VisibilityToggle = ({ initialState, onToggle }) => {
-	const [visibility, setVisibility] = useState(initialState);
+	const [visibility, setVisibility] = useState(initialState)
 
-	let visibilityIcon = null;
+	let visibilityIcon = null
 
 	if (visibility) {
-		visibilityIcon = <PontoIcon name='visibility' />;
+		visibilityIcon = <MyIcon name='visibility' />
 	} else {
 		visibilityIcon = (
-			<PontoIcon
+			<MyIcon
 				name='visibilityOff'
 				color='disabled'
 			/>
-		);
+		)
 	}
 
 	const handleToggle = () => {
-		setVisibility(!visibility);
-		onToggle();
-	};
+		setVisibility(!visibility)
+		onToggle()
+	}
 
-	return <IconButton onClick={handleToggle}>{visibilityIcon}</IconButton>;
-};
+	return <IconButton onClick={handleToggle}>{visibilityIcon}</IconButton>
+}
 
-export default VisibilityToggle;
+export default VisibilityToggle
